@@ -9,5 +9,67 @@
     <title>Organizando suas finanças</title>
 </head>
 <body>
+    <section>
+        <header>
+            <h1 class="titulo">Carteira</h1>
+            <div class="saldo">
+                <h2 id="valorSaldo">$ 00,00</h2>
+                <span>Saldo</span>
+            </div>
+            <div class="total-das-transacoes">
+                <div class="transacoes">
+                    <img src="./assets/img/seta-receita.png" alt="Seta receita">
+                    <div class="valor valor--receita">
+                        <h2 id="valorReceita">$ 00,00</h2>
+                        <span>Receita</span>
+                    </div>
+                </div>
+                <div class="transacoes">
+                    <img src="./assets/img/seta-despesa.png" alt="Seta despesa">
+                    <div class="valor valor--despesa">
+                        <h2 id="valorDespesa">$ 00,00</h2>
+                        <span>Despesa</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="lista-de-transacoes">
+            <h1>Minhas transações</h1>
+            <div id="historicoDeTransacoes" class="historico"></div>
+        </div>
+        <footer>
+            <button id="abrirModal"></button>
+        </footer>
+        <div class="fundo">
+            <form class="modal">
+                <div class="modal__content">
+                    <label for="valor-da-transacao">
+                        <p class="legenda">Qual o valor da transação?</p>
+                        <p class="modal__valor">$<input class="modal__valor" type="number" id="valor-da-transacao" placeholder="0,00" min="0" step=".01" required></p>
+                    </label>
+                    <label for="descricao-da-transacao">
+                        <p class="legenda">Descrição</p>
+                        <input class="modal__descricao" type="text" id="descricao-da-transacao" placeholder="Titulo" required>
+                    </label>
+                    <div class="modal__tipo">
+                        <p class="legenda">Qual o tipo da transação?</p>
+                        <div class="tipo__radios">
+                            <label for="tipo-receita">
+                                <input class="radios__receita" type="radio" name="tipo" id="tipo-receita" required>
+                                <p>Receita</p>
+                            </label>
+                            <label for="tipo-despesa">
+                                <input class="radios__despesa" type="radio" name="tipo" id="tipo-despesa" required>
+                                <p>Despesa</p>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="button" id="fecharModal" class="botao-fechar"></button>
+                </div>
+                <button id="botaoDeEditarTransacao" type="submit" class="modal__submit modal__submit--editar"></button>
+                <button id="botaoDeAdicionarTransacao" type="submit" class="modal__submit modal__submit--adicionar"></button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
