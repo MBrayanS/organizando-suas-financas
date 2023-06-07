@@ -1,0 +1,92 @@
+// Constantes
+
+$tamanhoDeFontePadrao: 16;
+
+// Fontes
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Asap:wght@500;700&display=swap');
+
+$fontePrimaria: 'Asap', sans-serif;
+$fonteSecundaria: 'Arvo', serif;
+
+// Cores
+
+$branco: #FCFCFD;
+$azulEscuro: #12235F;
+$azulClaro: #3155BF;
+$vermelho: #e12e45;
+$verde: #2bbb4b;
+$cinza: #575c6a;
+$cinzaClaro: #d4d3d3;
+$cinzaEscuro: #171d1c;
+
+// Gradiente
+
+$linearGradienteAzul: linear-gradient(0deg, $azulClaro 0%, $azulEscuro 100%);
+
+// mixins
+
+@mixin centralizar-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin tipografia-primaria { font-family: $fontePrimaria; }
+
+@mixin tipografia-primaria-medium {
+    @include tipografia-primaria();
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+@mixin tipografia-primaria-bold {
+    @include tipografia-primaria();
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+@mixin tipografia-secundaria-bold {
+    font-family: $fonteSecundaria;
+    font-weight: 700;
+}
+
+@mixin botao {
+    transition: all .5s;
+    cursor: pointer;
+    
+    &:hover { background-color: $azulEscuro; }
+    &:active { transform: scale(.9); }
+}
+
+@mixin botao-com-x {
+    &::after, &::before{
+        content: "";
+        background-color: $branco;
+        width: 2rem;
+        height: .4rem;
+        position: absolute;
+        margin: -.2rem 0 0 -1rem;
+        border-radius: .5rem;
+    }
+    
+    &::before { transform: rotate(90deg); }
+}
+
+// Placeholders
+
+%centralizar-flex-column {
+    @include centralizar-flex();
+    flex-direction: column;
+}
+
+%elemento-com-limite {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+%botao-adicionar {
+    @include botao();
+    @include botao-com-x();
+}
