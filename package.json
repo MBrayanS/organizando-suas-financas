@@ -1,0 +1,13 @@
+{
+    "scripts": {
+      "sass": "sass -w assets/style/scss/main.scss:assets/style/style.css -s compressed --no-source-map"
+    },
+    "dependencies": {
+      "sass": "^1.62.1"
+    },
+    "name": "organizando-suas-financas",
+    "description": "Aplicação web para gerenciar os ganhos e os gastos económicos.",
+    "version": "1.0.0",
+    "author": "MBrayan",
+    "license": "ISC"
+}
