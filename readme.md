@@ -39,7 +39,7 @@ Para criar esta aplicação utilizei JavaScript, que é uma linguagem orientada 
 
 ## :door: Como usar
 
-Caso você queira usar esta aplicação ou apenas ver o projeto funcionando, basta acessar [este](organizando-suas-financas.vercel.app) link.
+Caso você queira usar esta aplicação ou apenas ver o projeto funcionando, basta acessar [este](https://organizando-suas-financas.vercel.app) link.
 
 Estarei aguardando o seu feedback :wink:.
 
