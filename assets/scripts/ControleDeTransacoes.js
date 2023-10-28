@@ -1,12 +1,12 @@
 function ControleDeTransacoes( controleDeDados ) {
     const CHAVE_DO_LOCALSTORAGE = 'listaDeTransacoes'
 
-    let listaDeTransacoes = []
+    let listaDeTransacoes = carregarDadosLocal() || []
     let totalDeDespesa = 0
     let totalDeReceita = 0
     let saldo = 0
 
-    carregarDados()
+    atualizarSaldo()
     
     const pegarListaDeTransacoes = () => listaDeTransacoes
     const pegarTransacaoPorId = idDaTransacao => listaDeTransacoes.find(({ id }) => id === idDaTransacao)
@@ -14,11 +14,8 @@ function ControleDeTransacoes( controleDeDados ) {
     const pegarTotalDeReceita = () => totalDeReceita
     const pegarSaldo = () => saldo
 
-    function carregarDados() {
-        if( controleDeDados.haDados(CHAVE_DO_LOCALSTORAGE  ) ) {
-            listaDeTransacoes = controleDeDados.pegarDados(CHAVE_DO_LOCALSTORAGE   )
-            atualizarSaldo()
-        }
+    function carregarDadosLocal() {
+        return controleDeDados.pegarDados(CHAVE_DO_LOCALSTORAGE)
     }
 
     function salvarDados(){
