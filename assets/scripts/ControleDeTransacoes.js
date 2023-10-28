@@ -1,5 +1,6 @@
 function ControleDeTransacoes( controleDeDados ) {
-    const KEY = 'listaDeTransacoes'
+    const CHAVE_DO_LOCALSTORAGE = 'listaDeTransacoes'
+
     let listaDeTransacoes = []
     let totalDeDespesa = 0
     let totalDeReceita = 0
@@ -14,14 +15,14 @@ function ControleDeTransacoes( controleDeDados ) {
     const pegarSaldo = () => saldo
 
     function carregarDados() {
-        if( controleDeDados.haDados(KEY) ) {
-            listaDeTransacoes = controleDeDados.pegarDados(KEY)
+        if( controleDeDados.haDados(CHAVE_DO_LOCALSTORAGE  ) ) {
+            listaDeTransacoes = controleDeDados.pegarDados(CHAVE_DO_LOCALSTORAGE   )
             atualizarSaldo()
         }
     }
 
     function salvarDados(){
-        controleDeDados.salvarDados(KEY, listaDeTransacoes)
+        controleDeDados.salvarDados(CHAVE_DO_LOCALSTORAGE  , listaDeTransacoes)
     }
 
     function adicionarNovaTransacao( dados ) {
