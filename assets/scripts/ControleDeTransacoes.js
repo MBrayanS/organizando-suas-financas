@@ -1,4 +1,4 @@
-export function ControleDeTransacoes( controleDeDados ) {
+function ControleDeTransacoes( controleDeDados ) {
     const KEY = 'listaDeTransacoes'
     let listaDeTransacoes = []
     let totalDeDespesa = 0
@@ -104,3 +104,5 @@ export function ControleDeTransacoes( controleDeDados ) {
         pegarTransacaoPorId
     }
 }
+
+export default ControleDeTransacoes
