@@ -30,11 +30,28 @@ function renderizarHTML( controleDeTransacoes ) {
     function atualizarHeader() {
         const totalReceita = controleDeTransacoes.pegarTotalDeReceita()
         const totalDespesa = controleDeTransacoes.pegarTotalDeDespesa()
-        const saldo = controleDeTransacoes.pegarSaldo()
+        const saldo = prepararSaldo()
         
         valorSaldoDOM.textContent = tratarValor(saldo)
         valorReceitaDOM.textContent = tratarValor(totalReceita)
         valorDespesaDOM.textContent = tratarValor(totalDespesa)
+    }
+
+    function prepararSaldo() {
+        const valorDoSaldo = controleDeTransacoes.pegarSaldo()
+        
+        atribuirClassAoSaldo(valorDoSaldo)
+
+        return Math.abs(valorDoSaldo)
+    }
+
+    function atribuirClassAoSaldo( valorDoSaldo ) {
+        let classDoSaldo = ''
+        
+        if( valorDoSaldo < 0 ) classDoSaldo = 'saldo--negativo'
+        if( valorDoSaldo > 0 ) classDoSaldo = 'saldo--positivo'
+        
+        valorSaldoDOM.className = classDoSaldo
     }
     
     function carregarCardsDeTransacoes() {

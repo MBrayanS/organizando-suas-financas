@@ -58,7 +58,7 @@ export function ConstrutorDeCards( funcoesInternasDosCards ) {
         const cardEditar = document.createElement('div')
         const editarImg = document.createElement('img')
         
-        editarImg.src = "../assets/img/lapis.png"
+        editarImg.src = "./img/lapis.png"
         editarImg.alt = 'Lapis'
         
         cardEditar.classList.add('editar')
