@@ -11,7 +11,7 @@ const botaoQueFechaOModalDOM = document.getElementById('fecharModal')
 const botaoQueAdicionaUmNovaTransacaoDOM = document.getElementById('botaoDeAdicionarTransacao')
 const botaoQueEditaATransacaoDOM = document.getElementById('botaoDeEditarTransacao')
 
-export function renderizarHTML( controleDeTransacoes ) {
+function renderizarHTML( controleDeTransacoes ) {
     const funcoesInternasDosCards = {
         abrirOFormularioParaEditarTransacao,
         confirmarApagarTransacao,
@@ -160,3 +160,4 @@ export function renderizarHTML( controleDeTransacoes ) {
     function atualizarDataJsDoFormulario( idDaTransacao ) { formularioDeTransacaoDOM['data-id-da-transacao'] = idDaTransacao }
 }
 
+export default renderizarHTML

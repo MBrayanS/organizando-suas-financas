@@ -1,4 +1,4 @@
-export function ControleDeDados() {
+function ControleDeDados() {
     const haDados = key => key in localStorage
     const pegarDados = key => JSON.parse(localStorage.getItem(key))
     
@@ -10,3 +10,5 @@ export function ControleDeDados() {
         pegarDados,
     }
 }
+
+export default ControleDeDados
