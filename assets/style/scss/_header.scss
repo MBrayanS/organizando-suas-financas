@@ -17,12 +17,17 @@ header {
 }
 
 .saldo {
-    padding: 2rem 0 2rem 1rem;
-    text-align: left;
+    width: max-content;
+    margin: 0 auto;
+    padding: 2rem 0;
+    text-align: center;
 
     h2 {
         @extend %elemento-com-limite;
         font-size: 1.5rem;
+
+        &.saldo--negativo { color: $vermelho }
+        &.saldo--positivo { color: $verde }
     }
 }
 
