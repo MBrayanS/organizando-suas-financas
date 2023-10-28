@@ -1,6 +1,6 @@
 {
     "scripts": {
-      "sass": "sass -w assets/style/scss/main.scss:assets/style/style.css -s compressed --no-source-map"
+      "sass": "sass -w src/scss/main.scss:public/style/style.css -s compressed --no-source-map"
     },
     "dependencies": {
       "sass": "^1.62.1"
