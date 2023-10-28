@@ -1,0 +1,61 @@
+header {
+    color: $branco;
+    width: -webkit-fill-available;
+    top: 0;
+    position: relative;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    
+    h1 {
+        @include tipografia-primaria-bold;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+    }
+
+    h2 { @include tipografia-secundaria-bold; }
+    span { @include tipografia-primaria-medium; }
+}
+
+.saldo {
+    padding: 2rem 0 2rem 1rem;
+    text-align: left;
+
+    h2 {
+        @extend %elemento-com-limite;
+        font-size: 1.5rem;
+    }
+}
+
+.total-das-transacoes {
+    @include centralizar-flex();
+
+    max-width: 100%;
+    justify-content: space-evenly;
+}
+
+.transacoes {
+    @include centralizar-flex();
+
+    max-width: 50%;
+    gap: .5rem;
+
+    img {
+        width: .75rem;
+        height: .88rem;
+    }
+}
+
+.valor {
+    text-align: left;
+    max-width: 80%;
+}
+
+.valor--receita h2 {
+    @extend %elemento-com-limite;
+    color: $verde;
+}
+
+.valor--despesa h2 {
+    @extend %elemento-com-limite;
+    color: $vermelho;
+}
