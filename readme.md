@@ -1,6 +1,6 @@
 # organizando-suas-financas
   
-<div align='center' ><img alt='Logo'width='100%' src='https://github.com/MBrayanS/Assets/assets/116113377/2b632d26-e660-4909-84b4-ee169335b103'></div>
+<div align='center' ><img alt='Logo'width='100%' src='https://github.com/MBrayanS/organizando-suas-financas/assets/116113377/52af00e6-f9e9-4d9b-aaa5-f75d08c01575'></div>
 
 <br>
   
@@ -50,7 +50,7 @@ Estarei aguardando o seu feedback :wink:.
 O design foi feito por mim no Figma. E está disponivel [aqui](https://www.figma.com/file/kca91BgPhtbg82ffBMUDcI/Organizando-suas-finanças?type=design&node-id=0-1&t=cN3fjsQQ7mKJecKq-0).
 
 <div align='center'>
-  <img alt='Design' src='https://github.com/MBrayanS/Assets/assets/116113377/b994a016-ddc3-4b7b-b8fc-a3c370c63c68'>
+  <img alt='Design' src='https://github.com/MBrayanS/organizando-suas-financas/assets/116113377/b9a7d10c-473e-4e77-80f1-d682e137beda'>
 </div>
 
 <br>
